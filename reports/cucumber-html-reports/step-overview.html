@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Buggy Cars Rating</td>
+                          <td>1</td>
+                        <td>09 Apr 2021, 02:02</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Hooks.afterScenario(io.cucumber.java.Scenario)</td>
+                <td>10</td>
+                <td class="duration" data-value="4364937000">4s 364ms</td>
+                <td class="duration" data-value="436493700">436ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Hooks.beforeScenario(io.cucumber.java.Scenario)</td>
+                <td>10</td>
+                <td class="duration" data-value="32682224000">32s 682ms</td>
+                <td class="duration" data-value="3268222400">3s 268ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Login.i_enter_user_name_and_password(java.lang.String,java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="1163951000">1s 163ms</td>
+                <td class="duration" data-value="581975500">581ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Login.i_m_in_buggy_cars_rating_home_page()</td>
+                <td>2</td>
+                <td class="duration" data-value="85454000">085ms</td>
+                <td class="duration" data-value="42727000">042ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Login.i_should_be_able_to_login_to_the_system_with_greeting(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="697457000">697ms</td>
+                <td class="duration" data-value="697457000">697ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Login.i_should_get_an_error_message(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="237114000">237ms</td>
+                <td class="duration" data-value="237114000">237ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Profile.i_m_in_buggy_cars_rating_profile_page()</td>
+                <td>2</td>
+                <td class="duration" data-value="5088111000">5s 088ms</td>
+                <td class="duration" data-value="2544055500">2s 544ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Profile.i_should_be_able_to_view_save_data()</td>
+                <td>2</td>
+                <td class="duration" data-value="792440000">792ms</td>
+                <td class="duration" data-value="396220000">396ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Profile.i_update_gender_age_and_address(java.lang.String,java.lang.String,java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="1799750000">1s 799ms</td>
+                <td class="duration" data-value="899875000">899ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Register.i_m_in_register_page()</td>
+                <td>2</td>
+                <td class="duration" data-value="839095000">839ms</td>
+                <td class="duration" data-value="419547500">419ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Register.i_should_be_see_error_message(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="250192000">250ms</td>
+                <td class="duration" data-value="250192000">250ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Register.i_should_be_see_success_message(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="429782000">429ms</td>
+                <td class="duration" data-value="429782000">429ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Register.i_submit_login_first_name_last_name_password(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="1538518000">1s 538ms</td>
+                <td class="duration" data-value="769259000">769ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Voting.i_m_in_overall_rating_page()</td>
+                <td>4</td>
+                <td class="duration" data-value="5346024000">5s 346ms</td>
+                <td class="duration" data-value="1336506000">1s 336ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Voting.i_select_a_car_from_the_list(java.lang.String,java.lang.String)</td>
+                <td>4</td>
+                <td class="duration" data-value="33495739000">33s 495ms</td>
+                <td class="duration" data-value="8373934750">8s 373ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Voting.i_should_be_able_to_see_my_vote_in_the_table()</td>
+                <td>4</td>
+                <td class="duration" data-value="282852000">282ms</td>
+                <td class="duration" data-value="70713000">070ms</td>
+                <td class="failed">25.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Voting.i_vote_with_a_comment(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="3866776000">3s 866ms</td>
+                <td class="duration" data-value="1933388000">1s 933ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Voting.i_vote_without_a_comment()</td>
+                <td>2</td>
+                <td class="duration" data-value="2692853000">2s 692ms</td>
+                <td class="duration" data-value="1346426500">1s 346ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">org.justtestit.buggy.steps.Voting.the_vote_count_should_increase_by_one()</td>
+                <td>4</td>
+                <td class="duration" data-value="508000">000ms</td>
+                <td class="duration" data-value="127000">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>19</td>
+              <td>58</td>
+              <td class="duration">1m 35s 653ms</td>
+              <td class="duration">1s 649ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
